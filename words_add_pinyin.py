@@ -44,9 +44,9 @@ for root, dir, files in os.walk(target_dir):  #遍历目录文件
             target_encoding = "GB18030"
         with open(dir_file, 'r+', encoding=target_encoding) as fp:  # 打开要转换的汉字文件han.txt
             # 打开转换后输出的文件out_pinyin.txt
-            with open(dir_file.split(".")[0]+"add_pinyin_tone.txt", 'w', encoding=target_encoding) as fw:
+            with open(dir_file.split(".txt")[0]+"add_pinyin_tone.txt", 'w', encoding=target_encoding) as fw:
                 # 打开转换后输出的文件out_pinyin.txt
-                with open(dir_file.split(".")[0]+"add_pinyin_notone.txt", 'w', encoding=target_encoding) as fw_no:
+                with open(dir_file.split(".txt")[0]+"add_pinyin_notone.txt", 'w', encoding=target_encoding) as fw_no:
                     tmp = 0
                     for line in fp:
                         #以下部分决定生成文件的格式，如你好=ni2hao3
